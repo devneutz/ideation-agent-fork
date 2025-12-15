@@ -138,13 +138,11 @@ class IdeaGeneration:
 
         # Call API
         response = client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-5.2",
             messages=[{
                 "role": "user",
                 "content": prompt
-            }],
-            temperature=self.config.temperature,
-            max_tokens=self.config.max_tokens
+            }]
         )
 
         # Parse response
